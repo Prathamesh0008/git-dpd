@@ -88,6 +88,14 @@ export default function GlsSettingsPage() {
               trackingLinkType: labelSettings.trackingLinkType
                 ? String(labelSettings.trackingLinkType).toUpperCase()
                 : prev.label.trackingLinkType,
+              returnRoutingData:
+                typeof labelSettings.returnRoutingData === "boolean"
+                  ? labelSettings.returnRoutingData
+                  : prev.label.returnRoutingData,
+              includeShippingDate:
+                typeof labelSettings.includeShippingDate === "boolean"
+                  ? labelSettings.includeShippingDate
+                  : prev.label.includeShippingDate,
             },
           }));
         }
